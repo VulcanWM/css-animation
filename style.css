@@ -1,0 +1,17 @@
+#frame1 {
+    height:300px;
+    width:400px;
+    background-color: red;
+}
+
+#frame2 {
+    height:300px;
+    width:400px;
+    background-color: orange;
+}
+
+#frame3 {
+    height:300px;
+    width:400px;
+    background-color: yellow;
+}
