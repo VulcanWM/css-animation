@@ -1,4 +1,5 @@
 var frame = 0;
+var seconds = 1;
 var loop = true;
 
 function changeFrame() {
@@ -17,7 +18,6 @@ function changeFrame() {
             document.getElementById("frame1").style.display = "block"
         }
     }
-
 }
 
-setInterval(changeFrame, 1000);
+setInterval(changeFrame, seconds * 1000);
