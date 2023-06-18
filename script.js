@@ -45,6 +45,16 @@ loop_checkbox.addEventListener('change', (event) => {
     } else {
        loop = false;
     }
-  })
+})
+
+function myFunction(val) {
+    play_function()
+    console.log(frame);
+    let oldFrame = frame;
+    document.getElementById(`frame${oldFrame + 1}`).style.display = "none"
+    frame = val-1;
+    document.getElementById(`frame${frame + 1}`).style.display = "block"
+    play_function()
+}
 
 setInterval(changeFrame, seconds * 1000);

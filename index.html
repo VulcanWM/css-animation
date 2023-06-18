@@ -25,7 +25,7 @@
   </div>
   <button onclick="play_function()" id="play">⏸︎</button><br/>
   <label for="frameslider">Frame</label>
-  <input id="frameslider" type="range" min="1" value="1"/><br/>
+  <input id="frameslider" type="range" min="1" value="1" oninput="myFunction(this.value)"/><br/>
   <label for="loop">Loop</label>
   <input id="loop" type="checkbox"/>
   <script src="script.js"></script>
