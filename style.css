@@ -36,6 +36,7 @@
   
   [search_bar]{
     padding:2px;
+    padding-left: 5px;
     position:fixed;
     top:50px;
     left:80px;
@@ -44,20 +45,10 @@
     width:235px;
     border: 1px solid black;
     border-radius:10px;
+    font-family: 'Open Sans', sans-serif;
   }
 
-/* #frame1 {
-    background-color: red;
-} */
-
-#frame2 {
-    background-color: orange;
-}
-
-#frame3 {
-    background-color: yellow;
-}
-
-#frame4 {
-    background-color: green;
+[cursor]{
+    padding-left: 2px;
+    font-weight: bold;
 }
