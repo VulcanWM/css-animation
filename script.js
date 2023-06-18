@@ -4,6 +4,8 @@ var loop = true;
 var play = true;
 const numberOfFrames = 4;
 document.getElementById("frameslider").max = numberOfFrames;
+const loop_checkbox = document.getElementById('loop')
+loop_checkbox.checked = loop;
 
 function changeFrame() {
     if (play == true){
@@ -15,12 +17,12 @@ function changeFrame() {
             nextFrame.style.display = "block"
             document.getElementById("frameslider").value = frame + 1;
         } else {
-            document.getElementById("frameslider").value = 1;
             if (loop == true){
-                let currentFrame = document.getElementById(`frame${frame}`)
+                let currentFrame = document.getElementById(`frame${numberOfFrames}`)
                 currentFrame.style.display = "none"
                 frame = 0;
                 document.getElementById("frame1").style.display = "block"
+                document.getElementById("frameslider").value = 1;
             }
         } 
     }
@@ -36,5 +38,13 @@ function play_function(){
         button.innerText = "⏸︎"
     }
 }
+
+loop_checkbox.addEventListener('change', (event) => {
+    if (event.currentTarget.checked) {
+       loop = true;
+    } else {
+       loop = false;
+    }
+  })
 
 setInterval(changeFrame, seconds * 1000);
