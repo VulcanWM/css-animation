@@ -22,4 +22,15 @@ function changeFrame() {
     }
 }
 
+function play_function(){
+    let button = document.getElementById("play")
+    if (button.innerText == "⏸︎"){
+        play = false;
+        button.innerText = "⏵︎"
+    } else {
+        play = true;
+        button.innerText = "⏸︎"
+    }
+}
+
 setInterval(changeFrame, seconds * 1000);
