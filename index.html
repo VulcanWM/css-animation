@@ -134,7 +134,9 @@
   <label for="frameslider">Frame</label>
   <input id="frameslider" type="range" min="1" value="1" oninput="changeSlider(this.value)"/><br/>
   <label for="loop">Loop</label>
-  <input id="loop" type="checkbox"/>
+  <input id="loop" type="checkbox"/><br/>
+  <label for="frame_change">Frame Change:</label>
+  <input id="frame_change" type="number" value="0.5" onkeydown="changeSeconds(this)"/>seconds
   <script src="script.js"></script>
 </body>
 

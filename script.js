@@ -1,5 +1,5 @@
 var frame = 1;
-var seconds = 1;
+var seconds = 0.5;
 var loop = true;
 var play = true;
 const numberOfFrames = 17;
@@ -56,4 +56,16 @@ function changeSlider(val) {
     play_function()
 }
 
-setInterval(changeFrame, seconds * 1000);
+function changeSeconds(ele) {
+    if(event.key === 'Enter') {
+        seconds = parseFloat(ele.value);
+        clearInterval(refreshIntervalId);
+        refreshIntervalId = setInterval(changeFrame, seconds * 1000);
+    }
+}
+
+// function changeSeconds(){
+//     clearInterval(refreshIntervalId);
+// }
+
+var refreshIntervalId = setInterval(changeFrame, seconds * 1000);
