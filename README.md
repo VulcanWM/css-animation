@@ -1,5 +1,3 @@
- Here is my attempt at improving the readability:
-
 # Create CSS Animations with this Template
 
 This HTML, CSS, and JS template makes it easy to create CSS Animations. 
