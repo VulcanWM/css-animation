@@ -1,13 +1,20 @@
-# CSS Animation Template
-This is a template to make CSS Animations with HTML, CSS and Vanilla JS.
+ Here is my attempt at improving the readability:
 
-To define a frame in HTML, make sure to create a `<div>` with the id: `frame[number]`. If the frame isn't the first one, add the inline-styling `style="display: none;"` to the div. Also this template contains a `class` called "frame", which decides how big the frame will be and it's border, so add the class "frame" to the frame div as well.
+# Create CSS Animations with this Template
 
-While using the template, you can change these JavaScript variables:
+This HTML, CSS, and JS template makes it easy to create CSS Animations. 
 
-- `seconds`: This is the number of seconds each frame is showed for. *Default: 0.5*
-- `loop`: This defines if the animation plays on a loop or not. *Default: true*
-- `play`: This defines if the animation starts automatically playing. *Default: true*
-- `numberOfFrames`: This the number of frames in your animation
+Define animation frames as HTML `<div>` elements with the class `frame`. Give each frame a unique `id` of `frame[number]`.
 
-To check out a demo of this template, visit [here](https://vulcanwm.github.io/css-animation/)
+Hide frames after the first by adding `style="display: none;"`.
+
+Change these JavaScript variables:
+
+- `seconds`: How long (in seconds) each frame displays. Default: `0.5`  
+- `loop`: If the animation should loop. Default: `true`
+- `play`: If the animation starts automatically. Default: `true`   
+- `numberOfFrames`: The number of frames  
+  
+The `frame` class styles the frame size and border.
+
+View a demo at [CSS Animation Template](https://vulcanwm.github.io/css-animation/)
