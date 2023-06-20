@@ -32,4 +32,11 @@ let numberOfFrames = 4;
 
 The `frame` class styles the frame size and border.
 
+---
+
+The template contains:
+- a slider to change the frame of the animation
+- a checkbox to toggle or untoggle loop (`loop`)
+- an input to change the display time of each frame (`seconds`)
+
 You can view a demo of this CSS Animation template at [CSS Animation Template](https://vulcanwm.github.io/css-animation/)
