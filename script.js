@@ -7,19 +7,23 @@ document.getElementById("frameslider").max = numberOfFrames;
 const loop_checkbox = document.getElementById('loop')
 loop_checkbox.checked = loop;
 
+function hideAllFrames(){
+    for (let i = 1; i < numberOfFrames+1; i++) {
+        document.getElementById(`frame${i}`).style.display = "none"
+    }
+}
+
 function changeFrame() {
     if (play == true){
         frame += 1;
         if (frame <= numberOfFrames){
             let nextFrame = document.getElementById(`frame${frame}`)
-            let currentFrame = document.getElementById(`frame${frame-1}`)
-            currentFrame.style.display = "none"
+            hideAllFrames()
             nextFrame.style.display = "block"
             document.getElementById("frameslider").value = frame;
         } else {
             if (loop == true){
-                let currentFrame = document.getElementById(`frame${numberOfFrames}`)
-                currentFrame.style.display = "none"
+                hideAllFrames()
                 frame = 1;
                 document.getElementById("frame1").style.display = "block"
                 document.getElementById("frameslider").value = 1;
@@ -49,8 +53,7 @@ loop_checkbox.addEventListener('change', (event) => {
 
 function changeSlider(val) {
     play_function()
-    let oldFrame = frame;
-    document.getElementById(`frame${oldFrame}`).style.display = "none"
+    hideAllFrames()
     frame = val;
     document.getElementById(`frame${frame}`).style.display = "block"
     play_function()
@@ -63,9 +66,5 @@ function changeSeconds(ele) {
         refreshIntervalId = setInterval(changeFrame, seconds * 1000);
     }
 }
-
-// function changeSeconds(){
-//     clearInterval(refreshIntervalId);
-// }
 
 var refreshIntervalId = setInterval(changeFrame, seconds * 1000);
